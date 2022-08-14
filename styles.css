@@ -381,16 +381,18 @@ nav button, .center h3
     nav img
     {
         left: 40vw;
-        top: 15vh;
+        top: 12vh;
     }
-    
-    a,button
+    .c-button{
+        padding-right: 0;
+    }
+    button
     {
         font-size: small;
     }
     a span
     {
-        font-size: 15px;
+        font-size: 12px;
     }
     .landing{
         width: 100vw;
