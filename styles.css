@@ -1,5 +1,8 @@
 /*General*/
 
+html{
+    overflow-x: hidden;
+}
 body
 {
     margin: 0;
@@ -13,17 +16,17 @@ button
     background-color: rgba(31, 216, 170, 0.897);
     width: 200px;
     height: 50px;
-    font-size: 15px;
+    font-size: medium;
     font-family: "Arial Black", Gadget, sans-serif;
 }
 
 p
 {
-    font-size: 20px;
+    font-size: medium;
 }
 h2
 {
-    font-size: 40px;
+    font-size: 3vw;
     color: rgb(196, 196, 196);
 }
 
@@ -34,15 +37,13 @@ nav{
     padding-top: 2vmin;
     position:absolute;
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
 }
 nav img{
     position: absolute;
-    height: 4.5vmin;
-    width: 11vmax;
+    width: 15vmax;
     left: 45vmax;
-    resize: none;
 }
 nav button{
 background-color: rgba(0,0,0,0);
@@ -144,9 +145,13 @@ color: white;
 
 .hero a, .hero p
 {
-    margin: 0 0 2vmax 2vmax;
-    left: 2vmin
+    left: 4vmin
 }
+.hero p{
+    padding-bottom: 4vh;
+}
+
+
 
 .title
 {
@@ -191,7 +196,7 @@ color: white;
     content: "";
     display: block;
     position: absolute;
-    width:100vmax;
+    width:100vw;
     height:90vmin;
     background: linear-gradient(35deg,rgba(0, 0, 0, 0.253),rgba(25, 25, 26, 0.952));
   }
@@ -201,16 +206,21 @@ color: white;
     height: 100%;
 }
 .pane-1, .pane-3{
-    width:25vmax;
+    width:25vw;
 }
 .pane-2{
-    width:50vmax;
+    width:50vw;
 }
 .quote{
     position: absolute;
-    left: 45%;
-    top: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
     color:azure;
+    left: 46vw;
+}
+.links{
+    align-self: center;
 }
 .quote h3, .quote p{
 text-align: center;
@@ -229,12 +239,17 @@ text-align: center;
 
 .center
 {
-    padding-top: 10vh;
     background-color: rgb(43, 43, 49);
-    width: 100vmax;
-    height: 70vmin;
+    width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
+.center h2
+{
+    margin: 0;
+    padding: 5vmin;
+}
 
 /*Tags*/
 .radio
@@ -242,6 +257,7 @@ text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-bottom: 5vmin;
 }
 .radio-right, .radio-left
 {
@@ -259,7 +275,7 @@ text-align: center;
 .center h3
 {
     align-self: center;
-    padding-left:5vmin;
+    padding-left:2vmin;
     font-size: 3vmin;
     color: rgba(255, 113, 71);
 }
@@ -272,7 +288,6 @@ text-align: center;
 
 .tag1, .tag2, .tag3, .tag4
 {
-    padding-left: 10vmin;
     display: flex;
     flex-direction: row;
     padding-top: 5vmax;
@@ -298,15 +313,15 @@ text-align: center;
     align-items: center;
     background-color: #16161A;
     padding: auto 5vmax;
-    width: 100vmax;
+    width: 100vw;
 }
 .b-floater h2{
-    padding-top:5vmin;
+    margin: 0;
+    padding:5vmin;
 }
 .b-floater img{
  padding-top:5vh;
  padding-bottom: 2vh;
- height:30px;
 }
 .b-floater p{
     color:rgb(1, 191, 157)
@@ -357,28 +372,32 @@ nav button, .center h3
 
 
 
-@media(max-width:900px)
-{
+@media (max-width: 800px) {
+  
     .landing img, .side
     {
         display: none;
+    }
+    nav img
+    {
+        left: 40vw;
+        top: 15vh;
+    }
+    
+    a,button
+    {
+        font-size: small;
     }
     a span
     {
         font-size: 15px;
     }
-    nav img
-    {
-        width:140px;
-        height:35px;
+    .landing{
+        width: 100vw;
     }
     .hero
     {
         width: 100vw;
-    }
-    .hero a
-    {
-        top: 30vh;
     }
     .title-block-filler-1
     {
@@ -392,14 +411,13 @@ nav button, .center h3
     {
         text-align: center;
     }
-    .center
-    {
-        height: 40vh;
+    .quote{
+        left: 36vw;
     }
     .tag1 img, .tag2 img, .tag3 img, .tag4 img
     {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
     .tag1, .tag2, .tag3, .tag4
     {
@@ -408,5 +426,9 @@ nav button, .center h3
         flex-wrap: wrap;
     }
 
-    
+    .b-floater img
+    {
+        padding-top: 2vh;
+        width:20vw;
+    }
 }
